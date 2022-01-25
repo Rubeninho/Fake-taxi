@@ -9,14 +9,15 @@
     font: bold arial;
     margin-top: 0px;
 }
-#p11, #p12, #p13{
-    text-align: center; margin-top: 30px;
-            font: bold arial;
+#p11, #p12, #p13, #p14, #p15{
+    text-align: center;
+    margin-top: 20px;
+    font: bold arial;
 }
 #div11 {
     border: 0.7rem coral solid;
     width: 350px;
-    height: 440px;
+    height: 570px;
     background-color: lightblue;
     opacity: 0.6;
     border-radius: 100px;
@@ -26,15 +27,16 @@
     margin-top: 200px;
     font-family: Arial, Helvetica, sans-serif;
 }
-#form11, #form12, #form13 {
+#form11, #form12, #form13, #form14, #form15 {
     text-align: center;
+    margin-left: auto;
     margin-bottom: 20px;
 }
 #button11 {
     height: 35px;
     width: 70px;
     margin-left: 140px;
-    text-align: center; margin-top: 30px;
+    text-align: center; margin-top: 10px;
 }
 
 #body21 {
