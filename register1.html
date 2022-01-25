@@ -3,18 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body id=body11>
+  <form action = "send_data.php" method="post">
     <div id=div11>
   <h1 id=h11><font size="+8">Register</font></h1>
   <p id=p11><b><font size="+2">Username:</font></b></p>
-  <form id=form11><input type="text"></form>
+  <form id=form11><input type="text" name="username"></form>
   <p id=p12><b><font size="+2">Password:</font></b></p>
-  <form id=form12><input type="text"></form>
+  <form id=form12><input type="text" name="password"></form>
   <p id=p13><b><font size="+2">Repeat password:</font></b></p>
-  <form id=form13><input type="text"></form>
-  <button id=button11><b>Register</b></button>
+  <form id=form13><input  type="text"></form>
+  <button type ="submit" name="submit" id=button11><b>Register</b></button>
+
   </div>
+</form>
   <script src="script.js"></script>
 </body>
 </html>
