@@ -141,10 +141,11 @@
     margin-left: 400px;
 }
 .graduate {
-    background: blue;
     background: -webkit-linear-gradient(to right, rgba(12, 240, 240, 0.5), rgba(30, 77, 231, 0.5));
     background: linear-gradient(to right, rgba(12, 240, 240, 0.5), rgba(30, 77, 231, 0.5))
   }
-#registerColor {
-    color: white;
+.graduateButton {
+    color: white!important;
+    background: -webkit-linear-gradient(to right, rgba(224, 40, 40, 0.788), rgba(197, 22, 188, 0.5));
+    background: linear-gradient(to right, rgba(224, 40, 40, 0.788), rgba(197, 22, 188, 0.5))
 }
