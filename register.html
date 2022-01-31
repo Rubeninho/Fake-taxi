@@ -17,7 +17,7 @@
 			  <div class="card-body p-5" >
 				<h2 class="text-uppercase text-center mb-3 ">Register</h2>
   
-				<form action="send_data.php" method="post">
+				<form action="send_data.php" method="post" action = "check_password.php">
   
 				  <div class="form-outline mb-3">
 					<input type="text" id="registerForm1" class="form-control form-control-lg" name="username"/>
@@ -40,7 +40,9 @@
 				  </div>
   
 				  <div class="form-outline mb-3">
-					<input type="password" id="registerForm5" class="form-control form-control-lg" name="password"/>
+					<input type="password" id="registerForm5" class="form-control form-control-lg" name="password2"/>
+					<! Dal jsem tomu jmeno password2 rubene abych to mohl potovnavat v tom php s password .. >
+
 					<label class="form-label" for="registerForm5">Repeat your password</label>
 				  </div>
   
