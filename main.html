@@ -7,21 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>	
-<body>
+<body onload="getLocation()">
+	<form action="send_data.php" method="post"></form>
 <section class="vh-100 bg-image" style="background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg');">
 	<div class="mask d-flex align-items-center h-100 graduate">
 	  <div class="container h-100">
 		<div class="row d-flex justify-content-center align-items-center h-100">
-		  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-			<div class="card" style="border-radius: 15px;">
-				<h1 id="testlmao" class="text-uppercase text-center mb-4" style=" font-size: 45px;">Welcome to Fake Taxi!</h1>
-				
-				<form action="send_data.php" method="post">
-
-                    <div class="card" style="border-radius: 15px;">
-                    
-                    </div>
+		  <div class="col-12 col-md-18 col-lg-15 col-xl-12" id="picavelka">
+			
+			
+			<div class="card mb-3" style="border-radius: 15px;">
+				<h3 id="testlmao" class="text-uppercase text-center mb-4" style=" font-size: 30px;">ride id</h3>
+				<table class="table">
+					<thead>
+					  <tr>
+						<th scope="col">Username</th>
+						<th scope="col">Email</th>
+						<th scope="col">Phone</th>
+						<th scope="col">Place</th>
+						<th scope="col">Time</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>username</td>
+						<td>email</td>
+						<td>phone</td>
+						<td>place</td>
+						<td>Time</td>
+					  </tr>
+					</tbody>
+				  </table>
 			  </div>
+
+			  <div class="card" style="border-radius: 15px;">
+				<h1 id="testlmao" class="text-uppercase text-center mb-4" style=" font-size: 30px;">Welcome to Fake Taxi!</h1>
+				<style>
+				table, th, td {
+					border: 1px solid black;
+				  }
+				</style>
+				</div>
+	
+
 			</div>
 			</div>
 		  </div>
