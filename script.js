@@ -20,6 +20,11 @@ tableCreate.appendChild(createRide);
 function showLocation(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;
+
+    /*posialni dat na server pomoci php */
+    $.post("send_location.php", latitude);
+    $.post("send_location.php", longitude);
+    
     alert("Latitude : " + latitude + " Longitude: " + longitude);
  }
 
