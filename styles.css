@@ -16,10 +16,19 @@
     animation-duration: 5s;
 
     animation: 3s linear 0s infinite running myBouncing ;
-
-
-
 }
+#btndisclaimer {
+        height: 130px;
+        width: 130px;
+        position: fixed;
+        right: 50;
+        bottom: 50;
+        border-radius: 250px;
+        font-size: 60px;
+      }
+
+
+
 #Username_ID{
    
     animation: mySlide;
@@ -70,6 +79,8 @@
 
 h2{
     text-shadow: 5px 5px 5px gray ;
-    
+}
 
+tableStyle{
+    
 }
