@@ -1,6 +1,6 @@
 function initialize() {
    getLocation();
-   for (let index = 0; index < 5; index++) {
+   for (let index = 0; index < 15; index++) {
    generateItem("aosin");
       
     }
@@ -17,7 +17,7 @@ function generateItem(name) {
         time: '6am',
       },
       {
-        name: 'petr',
+        name: 'petr',   
         email:'petr@gmail.com',
         place:'Praha',
         phone: 895232146,
@@ -101,3 +101,25 @@ function showLocation(position) {
      $.post("send_data.php", latitude, longitude);
  }
  passVal();
+
+
+
+   frame = new JFrame("Google maps");
+   let destinationFile = "image.jpg";
+try {
+    
+   let imageUrl = "http://maps.googleapis.com/maps/api/staticmap?zoom=18&size=800x800&markers=45.10232295,-80.14865993&sensor=true";
+   let url = new URL(imageUrl);
+    frame.add( new JLabel( new ImageIcon( new ImageIcon(url).getImage().getScaledInstance( 630, 600, java.awt.Image.SCALE_SMOOTH ) ) ) );
+
+    /* Second set to test if same map can display multiple markers */   
+    let imageUrl2 = "http://maps.googleapis.com/maps/api/staticmap?zoom=18&size=800x800&markers=44.10253392,-81.14871575&sensor=true";
+    let url2 = new URL(imageUrl2);
+    frame.add( new JLabel( new ImageIcon( new ImageIcon(url2).getImage().getScaledInstance( 630, 600, java.awt.Image.SCALE_SMOOTH ) ) ) );
+
+    frame.setVisible(true);
+    frame.pack();
+    } catch (IOException) {
+        e.printStackTrace();
+    System.exit(1);
+    }
