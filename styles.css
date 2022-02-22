@@ -84,3 +84,8 @@ h2{
 tableStyle{
     
 }
+
+#map {
+    height: 100%;
+    width: 100%;
+}
