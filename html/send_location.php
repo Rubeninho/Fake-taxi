@@ -16,7 +16,7 @@ $longitude = $_POST['longitude'];
 // colletcting form data in variables
 
 //then we must insert them in the table
-$qry = "INSERT INTO `location` (`user_id`, `latitude`, `longitude`) VALUES ('$username', '$email', $phone, '$password')";
+$qry = "INSERT INTO `location` (`latitude`, `longitude`) VALUES ('$username', '$email', $phone, '$password')";
 // phone neni v uvozovkach protoze je to integer
 $insert = mysqli_query($con, $qry);
 if(!$insert){

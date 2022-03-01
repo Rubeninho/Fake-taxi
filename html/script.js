@@ -95,13 +95,15 @@ function showLocation(position) {
     }
  }
  
- function passVal(){
+ /*function passVal(){
      var data = {
          latitude, longitude
      };
      $.post("send_data.php", latitude, longitude);
  }
- passVal();
+ passVal();*/
+
+ 
 
 
 
