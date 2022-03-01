@@ -1,6 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+    <script>
+      var myCookies = {};
+      
+      function saveCookies()
+      {
+        myCookies["_user"] = document.getElementById("user").value;
+        myCookies["_uage"] = document.getElementById("age").value.toString();
+        //Start Reuseable Section
+        document.cookie = "";
+        var expiresAttrib = new Date(Date.now()+60*1000).toString();
+        var cookieString = "";
+        for (var key in myCookies)
+        {
+          cookieString = key+"="+myCookies[key]+";"+expiresAttrib+";";
+          document.cookie = cookieString;
+        }
+        //End Reuseable Section
+        document.getElementById("out").innerHTML = document.cookie;
+      }
+      
+      function loadCookies()
+      {
+        //Start Reuseable Section
+        myCookies = {};
+        var kv = document.cookie.split(";");
+        for (var id in kv)
+        {
+          var cookie = kv[id].split("=");
+          myCookies[cookie[0].trim()] = cookie[1];
+        }
+        //End Reuseable Section
+        document.getElementById("user").value = myCookies["_user"];
+        document.getElementById("age").value = myCookies["_uage"];
+      }
+      
+      </script>
     <title>Register</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="styles.css" />
@@ -34,7 +71,6 @@
                 <div class="card-body p-5">
                   <h2 class="text-uppercase text-center mb-3">Register</h2>
                   <div id="error"></div>
-				  
 
                   <form action="register.php" method="post" id="form">
                     <div class="form-outline mb-3">
@@ -105,6 +141,7 @@
                         type="submit"
                         class="btn btn-success btn-block btn-lg graduateButton text-body registerColor"
                         style="color: white !important"
+                        onclick="saveCookies()"
                       >
                         Register
                       </button>
@@ -116,10 +153,7 @@
                         ><u>Login here</u></a
                       >
                     </p>
-
                   </form>
-
-                  
                 </div>
               </div>
             </div>
