@@ -1,7 +1,7 @@
 function initialize() {
    getLocation();
-   for (let index = 0; index < 15; index++) {
-   generateItem("aosin");
+   for (let index = 0; index < 8; index++) {
+   generateItem("AS");
       
     }
    }
@@ -26,6 +26,7 @@ function generateItem(name) {
     ]
       let div = document.createElement("div");
       div.setAttribute("class", "card mb-3");
+      div.setAttribute("style", "opacity: 0.9;");
       div.setAttribute("id", "divID");
 
       let header = document.createElement("h3");
