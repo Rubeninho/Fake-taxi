@@ -5,7 +5,10 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script defer src ="script.js"></script>
+
 </head>
 <body>
 <section class="vh-100 bg-image" style="background-image: url('https://www.autorevue.cz/getthumbnail.aspx?w=1600&h=1000&q=60&id_file=644731428');">
@@ -17,31 +20,31 @@
 			  <div class="card-body p-5" >
 				<h2 class="text-uppercase text-center mb-3 ">Register</h2>
 
-				<form action="register.php" method="post">
+				<form action="/" method="GET" id ="form">
 
-				  <div class="form-outline mb-3">
-					<input type="text" id="registerForm1" class="form-control form-control-lg" name="username"/>
+				  <div class = "form-outline mb-3">
+					<input type="text" id="username" class="form-control form-control-lg" name="username"/>
 					<label class="form-label" for="registerForm1">Username</label>
 				  </div>
 				  	
 				  <div class="form-outline mb-3">
-					<input type="email" id="registerForm2" class="form-control form-control-lg"name="email" />
+					<input type="email" id="email" class="form-control form-control-lg"name="email" />
 					<label class="form-label" for="registerForm2">Email</label>
 				  </div>
 
 
 				  <div class="form-outline mb-3">
-					<input type="tel" id="registerForm3" class="form-control form-control-lg" name="phone"/>
+					<input type="tel" id="phone" class="form-control form-control-lg" name="phone"/>
 					<label class="form-label" for="registerForm3">Phone Number</label>
 				  </div>
 
 				  <div class="form-outline mb-3">
-					<input type="password" id="registerForm4" class="form-control form-control-lg" name="password" />
+					<input type="password" id="password" class="form-control form-control-lg" name="password" />
 					<label class="form-label" for="registerForm4">Password</label>
 				  </div>
 
 				  <div class="form-outline mb-3">
-					<input type="password" id="registerForm5" class="form-control form-control-lg" name="password_repeated"/>
+					<input type="password" id="password_repeated" class="form-control form-control-lg" name="password_repeated"/>
 					<label class="form-label" for="registerForm5">Repeat your password</label>
 				  </div>
 
