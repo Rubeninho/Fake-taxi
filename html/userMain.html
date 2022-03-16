@@ -11,60 +11,49 @@
 
 
 <body onload="initialize()">
-	<script>
-		function passVal(){
-     var data = {
-         latitude, longitude
-     };
-
-	 
-  
- }
- function loadLatitude(){
-        return data.latitude;
-	 }
-
-function loadLongitude(){
-        return data.longitude;
-	 }
- passVal();
-	</script>
 </head>	
+<form action="send_location.php" method="post">
 
-
-
-
-	<form action="send_location.php" method="post">
-
-		<var>  </var>
-		<input type="text" id="user" >
-
-        <input type="text" id="age">
-
-
-		<button
-		type="submit"
-		class="btn btn-success btn-block btn-lg graduateButton text-body registerColor"
-		style="color:red"
-		
-	  >
-		Send Location
-	  </button>
-
-<section class="vh-100 bg-image" style="background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg');">
-	<div class="mask d-flex align-items-center h-100 graduate">
-	  <div class="container h-100">
-		<div class="row d-flex justify-content-center align-items-center h-100">
-		  <div class="col-12 col-md-15 col-lg-12 col-xl-10 	mt-5" id="usermainDiv">
+<section class="vh-100 bg-image responsive" style="background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg'); position: absolut;" >
+	<div class="mask d-flex align-items-top h-100 graduate">
+		<div class="nav" id="navID">
+			<input type="checkbox" id="nav-check">
+			<div class="nav-header">
+			  <div class="nav-title">
+				Fake-Taxi
+			  </div>
+			</div>
+			<div class="nav-btn">
+			  <label for="nav-check">
+				<span></span>
+				<span></span>
+				<span></span>
+			  </label>
+			</div>
+	
+			<div class="nav-links">
+				<ul>
+			  <li><a href="userMain.html" target="_blank">Home</a></li>
+			  <li><a href="#" target="_blank">About</a></li>
+			  <li><a href="#" target="_blank">Services</a></li>
+			  <li><a href="#" target="_blank">Portfolio</a></li>
+			  <li><a href="login.html" target="_blank" >Logout</a></li>
+				</ul>
+			</div>
+			
+	  <div class="container h-100 mt-3">
+		<div class="row d-flex justify-content-center align-items-center h-100">	
+		  <div class="col-12 col-md-9 col-lg-12 col-xl-10 mt-2" id="usermainDiv">
             
             <div class="form-group">
                 <div class="d-flex col-xs-6 col-sm-6 col-md-6 col-lg-6">
-					<a href="newRide.html">
+					<a href="newRide1.html">
                     <button type="button" class="btn btn-primary btn-circle" id="btndisclaimer">
 						<span class="glyphicon">&#x2b;</span>
-					</button>
+					</button>	
 				</a>
-
+				
+				  </div>
                 </div>
 			</div>
 			</div>

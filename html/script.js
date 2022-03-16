@@ -2,8 +2,11 @@ function initialize() {
    getLocation();
    for (let index = 0; index < 8; index++) {
    generateItem("AS");
-      
     }
+    //script, co byl dřív v usermain
+    passVal();
+   loadLatitude(latitude);
+   loadLongitude(longitude);
    }
 
 function generateItem(name) {
@@ -25,8 +28,7 @@ function generateItem(name) {
       }
     ]
       let div = document.createElement("div");
-      div.setAttribute("class", "card mb-3");
-      div.setAttribute("style", "opacity: 0.9;");
+      div.setAttribute("class", "card mt-4");
       div.setAttribute("id", "divID");
 
       let header = document.createElement("h3");
@@ -38,7 +40,7 @@ function generateItem(name) {
       table.setAttribute("class", "table");
       let thead = document.createElement("thead")
       let tr = document.createElement("tr")
-      let tableArray = ["Username", "Email", "Phone", "Place", "Time"]
+      let tableArray = ["Username", "Email", "Place", "Phone", "Time"]
 
       tableArray.forEach(item=>{
          let th = document.createElement("th")
@@ -127,4 +129,19 @@ try {
     System.exit(1);
     }
 
-    
+    function passVal(){
+      var data = {
+          latitude, longitude
+      };
+ 
+     
+   
+  }
+  function loadLatitude(){
+         return data.latitude;
+     }
+ 
+ function loadLongitude(){
+         return data.longitude;
+     }
+  passVal();

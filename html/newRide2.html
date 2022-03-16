@@ -1,57 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>place</title>
-	<meta charsect="utf-8">
+	<title>Register</title>
+	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles.css" />
-    <me  ta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet"
-    href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="crossorigin="" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script>
+      function passVal(){
+       var data = {
+           latitude, longitude
+       };
+  
+     
+    
+   }
+   function loadLatitude(){
+          return data.latitude;
+     }
+  
+  function loadLongitude(){
+          return data.longitude;
+     }
+   passVal();
+    </script>
 </head>	
 <body>
-<div class="mask d-flex align-items-center h-100 graduate">
+<section class="vh-100 bg-image" style="background-image: url('https://www.autorevue.cz/getthumbnail.aspx?w=1600&h=1000&q=60&id_file=644731428');">
+	<div class="mask d-flex align-items-center h-100 graduate">
 	  <div class="container h-100">
 		<div class="row d-flex justify-content-center align-items-center h-100">
 		  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
 			<div class="card" style="border-radius: 15px;">
 			  <div class="card-body p-5" >
-				<h2 class="text-uppercase text-center mb-3">Just select place where you wanna pick up</h2>
-                    <div>
-                    <script>p
-                      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
-                      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
-                      crossorigin=""
-                    </script>
-                  </head>
-                  <input>
-                    <div id="map"></div>
-                  </body>
-                  <script>
-                    var map = L.map("map").setView([50.074, 14.436], 13);
-                
-                    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                      attribution:
-                        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-                    }).addTo(map);
-                
-                    lat = 50.074
-                    lng = 14.436
-                    var selectedLatLng = 0
-                    var marker = -1
-                
-                    function onMapClick(e) {
-                        if(marker == -1){
-                             marker = L.marker([lat, lng])
-                            .addTo(map)
-                        }
-                        marker.setLatLng(e.latlng);
-                        selectedLatLng = e.latlng;
-                        console.log(selectedLatLng)
-                    }
-                
-                    map.on('click', onMapClick);
-                  </script>
-		        </div>		
+				<h2 class="text-uppercase text-center mb-3" style="color: black;">Starting location</h2>
+  
+				<form action="send_data.php" method="post">
+        <label 
+            style="justify-content: center; color: black; font-size: 20px;">
+                Now select whether you will be on your current location, or select location where you will be.
+        </label>
+
+		      <button
+		        type="submit"
+		                  class="btn btn-success btn-block btn-lg graduateButton text-body registerColor"
+		                  style="color: white !important;; margin-bottom: 20px;"
+	                  >
+		      Send Current Location
+	        </button>
+				
+				  <a href="maps.html"
+                    type="submit"
+                    class="btn btn-success btn-block btn-lg graduateButton text-body registerColor"
+                    style="color: white !important"
+						
+                    onclick="saveCookies()"
+                      >
+						Choose Location
+				  </button>
+				</a>
+				</form>
   
 			  </div>
 			</div>
@@ -59,6 +67,6 @@
 		</div>
 	  </div>
 	</div>
-  
+  </section>
 </body>
 </html>

@@ -15,27 +15,37 @@
 		  <div class="col-12 col-md-9 col-lg-7 col-xl-6">
 			<div class="card" style="border-radius: 15px;">
 			  <div class="card-body p-5" >
-				<h2 class="text-uppercase text-center mb-3">New Ride</h2>
+				<h2 class="text-uppercase text-center mb-3" style="color: black;">New Ride</h2>
   
 				<form action="send_data.php" method="post">
   
 				  <div class="form-outline mb-3">
-					<input type="text" id="registerForm1" class="form-control form-control-lg" name="username"/>
-					<label class="form-label" for="registerForm1">Time</label>
-				  </div>
-  
-				  <div class="form-outline mb-3">
-					<input type="email" id="registerForm2" class="form-control form-control-lg"name="email" />
-					<label class="form-label" for="registerForm2">Place</label>
+					<input type="time" id="newRideForm1" class="form-control form-control-lg" name="time" required="required"/>
+					<label class="form-label" for="newRideForm1" style="color: black;">Time</label>
 				  </div>
 				  
 				  <div class="form-outline mb-3">
-					<input type="tel" id="registerForm3" class="form-control form-control-lg" name="phone"/>
-					<label class="form-label" for="registerForm3">Phone Number</label>
+					<input type="date" id="newRideForm2" class="form-control form-control-lg" name="date" required="required"/>
+					<label class="form-label" for="newRideForm2" style="color: black;">Date</label>
 				  </div>
-  
-				  <p class="text-center text-muted mt-3	 mb-0">Have already an account? <a href="login.html" class="fw-bold text-body"><u>Login here</u></a></p>
-  
+
+				  <div class="form-outline mb-3">
+					<input type="tel" id="newRideForm3" class="form-control form-control-lg" name="phone" required="required"/>
+					<label class="form-label" for="newRideForm3" style="color: black;">Phone Number</label>
+				  </div>
+				  <a href="maps.html">
+				  <button
+				  		type="submit"
+                        href="newRide2.html"
+                        type="submit"
+                        class="btn btn-success btn-block btn-lg graduateButton text-body registerColor"
+                        style="color: white !important"
+						
+                        onclick="saveCookies()"
+                      >
+						Choose Location
+				  </button>
+				</a>
 				</form>
   
 			  </div>
