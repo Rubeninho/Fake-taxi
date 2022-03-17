@@ -133,14 +133,14 @@ body {
 
   .nav > .nav-btn {
     display: none;
-    margin-left: 100px;
+    margin-left: 30px;
   }
 
   .nav > .nav-links {
     display: inline;
     float: right;
     font-size: 18px;
-    margin-left: 50px;
+    margin-left: 20px;
   }
   .nav > .nav-links > ul li a{
     display: block;
