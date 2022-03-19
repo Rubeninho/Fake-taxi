@@ -14,8 +14,9 @@
 </head>	
 <form action="send_location.php" method="post">
 
-<section class="vh-100 bg-image responsive" style="background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg'); position: absolut;" >
+<section class="v-100 bg-image responsive " style="background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg');" class="responsive">
 	<div class="mask d-flex align-items-top h-100 graduate">
+		
 		<div class="nav" id="navID">
 			<input type="checkbox" id="nav-check">
 			<div class="nav-header">
@@ -33,20 +34,22 @@
 	
 			<div class="nav-links">
 				<ul>
-			  <li><a href="userMain.html" target="_blank">Home</a></li>
-			  <li><a href="#" target="_blank">About</a></li>
-			  <li><a href="#" target="_blank">Services</a></li>
-			  <li><a href="#" target="_blank">Portfolio</a></li>
-			  <li style="margin-left: 850px;"><a href="login.html" target="_blank">Logout</a></li>
+			  <li><a href="driverMain.html">Driver</a></li>
+			  <li><a href="userMain.html">Traveller</a></li>
+			  <li><a href="#">About us</a></li>
+			  <li><a href="login.html">Logout</a></li>
 				</ul>
 			</div>
 			
 	  <div class="container h-100 mt-3">
+		<div class="card-body p-5"> 
+			<h2 class="text-uppercase text-center" style="color: black;">Ride history:</h2>
+	  
 		<div class="row d-flex justify-content-center align-items-center h-100">	
 		  <div class="col-12 col-md-9 col-lg-12 col-xl-10 mt-2" id="usermainDiv">
             
             <div class="form-group">
-                <div class="d-flex col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="d-flex col-xs-3 col-sm-6 col-md-8 col-lg-10">
 					<a href="newRide1.html">
                     <button type="button" class="btn btn-primary btn-circle" id="btndisclaimer">
 						<span class="glyphicon">&#x2b;</span>
@@ -59,7 +62,8 @@
 			</div>
 		  </div>
 		</div>
-	  
+	  </div>
+		</div>
 	<script src="script.js"></script>
   </section>
 </body>
