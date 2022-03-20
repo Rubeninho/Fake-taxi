@@ -31,6 +31,7 @@
     function onMapClick(e) {
         if(marker == -1){
              marker = L.marker([lat, lng])
+             // var lat long ulozi na on clik 
             .addTo(map)
         }
         marker.setLatLng(e.latlng);
