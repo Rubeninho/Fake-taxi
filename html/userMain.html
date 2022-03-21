@@ -1,70 +1,68 @@
 <!DOCTYPE html id=main>
 <html lang="en">
+
 <head>
 	<style>
-		</style>
+	</style>
 	<title>Fake Taxi</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="styles.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 <body onload="initialize()">
-</head>	
-<form action="send_location.php" method="post">
-
-<section class="v-100 bg-image responsive " style="background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg');" class="responsive">
-	<div class="mask d-flex align-items-top h-100 graduate">
-		
+	</head>
+	<div style="background-attachment: fixed; background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg');">
 		<div class="nav" id="navID">
 			<input type="checkbox" id="nav-check">
 			<div class="nav-header">
-			  <div class="nav-title">
-				Fake-Taxi
-			  </div>
+				<div class="nav-title">
+					Fake-Taxi
+				</div>
 			</div>
 			<div class="nav-btn">
-			  <label for="nav-check">
-				<span></span>
-				<span></span>
-				<span></span>
-			  </label>
+				<label for="nav-check">
+					<span></span>
+					<span></span>
+					<span></span>
+				</label>
 			</div>
-	
+
 			<div class="nav-links">
 				<ul>
-			  <li><a href="driverMain.html">Driver</a></li>
-			  <li><a href="userMain.html">Traveller</a></li>
-			  <li><a href="#">About us</a></li>
-			  <li><a href="login.html">Logout</a></li>
+					<li><a href="driverMain.html">Driver</a></li>
+					<li><a href="userMain.html">Traveller</a></li>
+					<li><a href="#">About us</a></li>
+					<li><a href="login.html">Logout</a></li>
 				</ul>
 			</div>
-			
-	  <div class="container h-100 mt-3">
-		<div class="card-body p-5"> 
-			<h2 class="text-uppercase text-center" style="color: black;">Ride history:</h2>
-	  
-		<div class="row d-flex justify-content-center align-items-center h-100">	
-		  <div class="col-12 col-md-9 col-lg-12 col-xl-10 mt-2" id="usermainDiv">
-            
-            <div class="form-group">
-                <div class="d-flex col-xs-3 col-sm-6 col-md-8 col-lg-10">
+		</div>
+
+		<div>
+			<div class="p-5">
+				<h2 class="text-uppercase text-center" style="color: black;">Ride history:</h2>
+			</div>
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-12 col-lg-8" id="usermainDiv">
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="d-flex col-xs-3 col-sm-6 col-md-8 col-lg-10">
 					<a href="newRide1.html">
-                    <button type="button" class="btn btn-primary btn-circle" id="btndisclaimer">
-						<span class="glyphicon">&#x2b;</span>
-					</button>	
-				</a>
-				
-				  </div>
-                </div>
+						<button type="button" class="btn btn-primary btn-circle" id="btndisclaimer">
+							<span class="glyphicon">&#x2b;</span>
+						</button>
+					</a>
+
+				</div>
 			</div>
-			</div>
-		  </div>
 		</div>
-	  </div>
-		</div>
-	<script src="script.js"></script>
-  </section>
+	</div>
 </body>
+<script src="script.js"></script>
+
 </html>
