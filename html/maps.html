@@ -37,7 +37,7 @@ function onMapClick(e) {
     let btn = document.createElement("button");
     let link = document.createElement("a");
     link.innerHTML = "Click me";
-    link.setAttribute("href", "./ahoj.html");
+    link.setAttribute("href", "./userMain.html");
     btn.appendChild(link);
     btn.onclick = proceedFunc;
     marker = L.marker([lat, lng]).addTo(map).bindPopup(btn);
