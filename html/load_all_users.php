@@ -13,7 +13,7 @@
  $query = 'SLECET id, username, email, phone, password FROM users';
 $result = mysqli_query($connect, $query);
 
-echo mysqli_num_rows( $result);
+echo mysqli_num_rows($result);
 while($record = mysql_fetch_assoc($result)){
     echo'<pre>';
     print_r($record);
