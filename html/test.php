@@ -14,13 +14,10 @@
         <th>name</th>
         <th>password</th>
         <th>email</th>
-        
-
-
         <th>sign_up</th>
 </tr>
 <?php
-$conn = mysqli_connect("localhost","root","","websitedb");
+$conn = mysqli_connect("localhost","root","bEdEmAn74","websitedb");
 $sql = "SELECT * FROM users";
 $result =$conn->query($sql);
 if($result->num_rows >0){
