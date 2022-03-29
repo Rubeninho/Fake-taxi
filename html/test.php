@@ -14,6 +14,9 @@
         <th>name</th>
         <th>password</th>
         <th>email</th>
+        
+
+
         <th>sign_up</th>
 </tr>
 <?php

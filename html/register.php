@@ -5,7 +5,7 @@ if (isset($_POST["submit"])) {
   // First we get the form data from the URL
   $host = "localhost";
   $user = "root";
-  $pass = "bEdEmAn74";
+  $pass = "";
   $db = "stopak";
   $con = new mysqli($host,$user,$pass,$db);
   if(!$con){

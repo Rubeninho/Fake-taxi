@@ -102,6 +102,32 @@
                       <a href="login.html" class="fw-bold text-body"><u>Login here</u></a>
                     </p>
                   </form>
+                  <?php
+    // Error messages
+    if (isset($_GET["error"])) {
+      if ($_GET["error"] == "emptyinput") {
+        echo "<p>Fill in all fields!</p>";
+      }
+      else if ($_GET["error"] == "invaliduid") {
+        echo "<p>Choose a proper username!</p>";
+      }
+      else if ($_GET["error"] == "invalidemail") {
+        echo "<p>Choose a proper email!</p>";
+      }
+      else if ($_GET["error"] == "passwordsdontmatch") {
+        echo "<p>Passwords doesn't match!</p>";
+      }
+      else if ($_GET["error"] == "stmtfailed") {
+        echo "<p>Something went wrong!</p>";
+      }
+      else if ($_GET["error"] == "usernametaken") {
+        echo "<p>Username already taken!</p>";
+      }
+      else if ($_GET["error"] == "none") {
+        echo "<p>You have signed up!</p>";
+      }
+    }
+  ?>
                 </div>
               </div>
             </div>
