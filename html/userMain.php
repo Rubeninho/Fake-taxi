@@ -49,7 +49,7 @@
 				<div class="row justify-content-center">
 					<div class="col-12 col-lg-8" id="usermainDiv">
 												<?php
-$conn = mysqli_connect("localhost","root","","websitedb");
+$conn = mysqli_connect("localhost","root","bEdEmAn74","stopak");
 $sql = "SELECT * FROM users";
 $result =$conn->query($sql);
 if($result->num_rows >0){
