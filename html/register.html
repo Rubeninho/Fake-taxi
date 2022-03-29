@@ -32,8 +32,11 @@
       //End Reuseable Section
       document.getElementById("username").value = myCookies["username"];
       document.getElementById("email").value = myCookies["email"];
+      return document.cookie;
     }
-
+    document.cookie = "username=John Doe";
+    console.log(document.cookie);
+    
   </script>
   <title>Register</title>
   <meta charset="utf-8" />

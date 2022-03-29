@@ -1,28 +1,77 @@
-function initialize() {
-   getLocation();
+function initialize1() {
    for (let index = 0; index < 8; index++) {
-   generateItem("AS");
+   generateTableHistory("Ride + ID (filter by username)");
     }
-    //script, co byl dřív v usermain
+    //JÍZDY FILTROVANÉ USERNAME
     passVal();
    loadLatitude(latitude);
    loadLongitude(longitude);
    }
 
-function generateItem(name) {
+   function initialize2() {
+      for (let index = 0; index < 8; index++) {
+      generateTableCurrent("Ride + id");
+       }
+       //VŠECHNY DOSTUPNÉ JÍZDY
+       passVal();
+      loadLatitude(latitude);
+      loadLongitude(longitude);
+      }
+   
+function generateTableHistory(name) {
    let parent = document.getElementById("usermainDiv");
    let rows =[
-      {
-        name: 'pepa',
-        email:'something@gmail.com',
-        place:'Kolin',
-        phone: 878485121,
-        time: '6am',
-      },
       {
         name: 'petr',   
         email:'petr@gmail.com',
         place:'Praha',
+        phone: 895232146,
+        time: '0am',
+      }
+    ]
+      let div = document.createElement("div");
+      div.setAttribute("class", "card mt-4");
+      div.setAttribute("id", "divID");
+
+      let header = document.createElement("h3");
+      header.innerHTML = name;
+      header.setAttribute("class", "text-uppercase text-center mb-4");
+      header.setAttribute("id", "headerID");
+
+      let table = document.createElement("table")
+      table.setAttribute("class", "table");
+      let thead = document.createElement("thead")
+      let tr = document.createElement("tr")
+      let tableArray = ["Username", "Email", "Place", "Phone", "Time"]
+
+      tableArray.forEach(item=>{
+         let th = document.createElement("th")
+         th.setAttribute("scope","col")
+         th.innerHTML = item;
+         tr.appendChild(th);
+      })
+      thead.appendChild(tr);
+      table.appendChild(thead);
+
+      let tbody = document.createElement("tbody")
+      rows.forEach(item=>{
+         let tr = document.createElement("tr")
+         tr.innerHTML = `<td>${item.name}</td><td>${item.email}</td><td>${item.place}</td><td>${item.phone}</td><td>${item.time}</td>`;
+         tbody.appendChild(tr);
+      })
+      table.appendChild(tbody);
+      div.appendChild(header);
+      div.appendChild(table);
+      parent.appendChild(div);
+}
+
+function generateTableCurrent(name) {
+   let parent = document.getElementById("usermainDiv");
+   let rows =[
+      {
+        name: 'něco',   
+        email:'něco@gmail.com',
+        place:'vždycky Kolín',
         phone: 895232146,
         time: '0am',
       }
@@ -105,7 +154,7 @@ function showLocation(position) {
  }
  passVal();*/
 
- 
+
 
 
 
