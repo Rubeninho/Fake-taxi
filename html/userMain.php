@@ -50,11 +50,11 @@
 					<div class="col-12 col-lg-8" id="usermainDiv">
 												<?php
 $conn = mysqli_connect("localhost","root","bEdEmAn74","stopak");
-$sql = "SELECT * FROM users";
+$sql = "SELECT username, email FROM users";
 $result =$conn->query($sql);
 if($result->num_rows >0){
     while($row = $result-> fetch_assoc()){
-        echo  "</td><td>" .$row["name"]. "</td><td>"  .$row["email"]. "</td><td>";
+        echo  "<td><td>" .$row["username"]. "</td> <td>"  .$row["email"]. "</td></td>";
 
     }
 }else{
