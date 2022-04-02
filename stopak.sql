@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Počítač: localhost
--- Vytvořeno: Úte 29. bře 2022, 17:27
+-- Vytvořeno: Sob 02. dub 2022, 21:07
 -- Verze serveru: 10.4.22-MariaDB
 -- Verze PHP: 8.1.1
 
@@ -36,6 +36,20 @@ CREATE TABLE `location` (
 -- --------------------------------------------------------
 
 --
+-- Struktura tabulky `rides`
+--
+
+CREATE TABLE `rides` (
+  `id` int(11) NOT NULL,
+  `driver_id` int(11) NOT NULL,
+  `time` time NOT NULL,
+  `date` date NOT NULL,
+  `passenger_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabulky `users`
 --
 
@@ -51,12 +65,6 @@ CREATE TABLE `users` (
 -- Vypisuji data pro tabulku `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `phone`, `password`) VALUES
-(4, 'danicek', 'dan.hort@seznam.cz', 721144676, '123456789'),
-(5, 'danik', 'dan.hort@seznam.cz', 721144676, '123569874'),
-(6, 'dan', 'dan.hort@seznam.cz', 721144676, '12'),
-(7, 'dae', 'dan.hort@seznam.cz', 721144676, '1');
-
 --
 -- Indexy pro exportované tabulky
 --
@@ -66,6 +74,14 @@ INSERT INTO `users` (`id`, `username`, `email`, `phone`, `password`) VALUES
 --
 ALTER TABLE `location`
   ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexy pro tabulku `rides`
+--
+ALTER TABLE `rides`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `driver_id` (`driver_id`),
+  ADD KEY `passenger_id` (`passenger_id`);
 
 --
 -- Indexy pro tabulku `users`
@@ -78,10 +94,16 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT pro tabulku `rides`
+--
+ALTER TABLE `rides`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT pro tabulku `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Omezení pro exportované tabulky
@@ -92,6 +114,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `location`
   ADD CONSTRAINT `location_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+
+--
+-- Omezení pro tabulku `rides`
+--
+ALTER TABLE `rides`
+  ADD CONSTRAINT `rides_ibfk_1` FOREIGN KEY (`driver_id`) REFERENCES `users` (`id`),
+  ADD CONSTRAINT `rides_ibfk_2` FOREIGN KEY (`passenger_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
