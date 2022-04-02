@@ -90,44 +90,12 @@
                     </div>
 
                     <div class="form-check d-flex justify-content-center mb-3"></div>
-                    <div class="d-flex justify-content-center">
-                      <a href="userMain.html" type="submit"
-                        class="btn btn-success btn-block btn-lg graduateButton text-body registerColor"
-                        style="color: white !important" onclick="saveCookies()">
-                        Register
-                      </a>
-                    </div>
+                    <button class="d-flex justify-content-center" type="submit" onclick="saveCookies()">Register</button>
                     <p class="text-center text-muted mt-3 mb-0">
                       Have already an account?
                       <a href="login.html" class="fw-bold text-body"><u>Login here</u></a>
                     </p>
                   </form>
-                  <?php
-    // Error messages
-    if (isset($_GET["error"])) {
-      if ($_GET["error"] == "emptyinput") {
-        echo "<p>Fill in all fields!</p>";
-      }
-      else if ($_GET["error"] == "invaliduid") {
-        echo "<p>Choose a proper username!</p>";
-      }
-      else if ($_GET["error"] == "invalidemail") {
-        echo "<p>Choose a proper email!</p>";
-      }
-      else if ($_GET["error"] == "passwordsdontmatch") {
-        echo "<p>Passwords doesn't match!</p>";
-      }
-      else if ($_GET["error"] == "stmtfailed") {
-        echo "<p>Something went wrong!</p>";
-      }
-      else if ($_GET["error"] == "usernametaken") {
-        echo "<p>Username already taken!</p>";
-      }
-      else if ($_GET["error"] == "none") {
-        echo "<p>You have signed up!</p>";
-      }
-    }
-  ?>
                 </div>
               </div>
             </div>
