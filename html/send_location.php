@@ -1,3 +1,4 @@
+
 <?php
 $host = "localhost";
 $user = "root";
@@ -7,8 +8,13 @@ $con = new mysqli($host,$user,$pass,$db);
 if(!$con){
 	echo"There are some problems conecting the database";
 }
-$latitude = $_POST['latitude'];
-$longitude = $_POST['longitude'];
+$latitude = $_POST['load_latitude'];
+$longitude = $_POST['load_longitude'];
+
+echo "<h2>" . $latitude . "</h2>";
+echo "<h2>" . $longitude . "</h2>";
+
+
 
 // $password = $_POST['password'];
 
@@ -16,7 +22,7 @@ $longitude = $_POST['longitude'];
 // colletcting form data in variables
 
 //then we must insert them in the table
-$qry = "INSERT INTO `location` (`latitude`, `longitude`) VALUES ('$username', '$email', $phone, '$password')";
+$qry = "INSERT INTO `locations` (`latitude`, `longitude`) VALUES ('$latitude', '$longitude')";
 // phone neni v uvozovkach protoze je to integer
 $insert = mysqli_query($con, $qry);
 if(!$insert){

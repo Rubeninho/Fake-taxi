@@ -13,6 +13,29 @@
       crossorigin=""
     ></script>
   </head>
+  <p> Hello! I'm <span id="latitude"></span>.</p>
+  <p> Hello! I'm <span id="longitude"></span>.</p>
+ 
+
+
+  <form action="send_location.php" method="post" id="form">
+
+
+      <div class="form-outline">
+        <input type="load_latitude" id="lat" class="form-control form-control-lg" name="load_latitude" />
+        <label class="form-label" style="color: black;" for="registerForm4">Latitude</label>
+      </div>
+
+      <div class="form-outline mb-2">
+        <input type="load_longitude" id="long" class="form-control form-control-lg"
+          name="load_longitude" />
+        <label class="form-label" style="color: black;" for="registerForm5">Longitude</label>
+      </div>
+
+      <div class="form-check d-flex justify-content-center mb-3"></div>
+
+      <button type="submit">Send Location</button>
+
     <div id="map"></div>
   </body>
   <script>
@@ -49,6 +72,16 @@ function onMapClick(e) {
 }
 
 map.on("click", onMapClick);
+// pro prevedeni javascript variablu do html
+document.getElementById('latitude').innerHTML = lat ;
+document.getElementById('longitude').innerHTML = lng;
+  var input_lat = document.getElementById('load_latitude');
+  input_lat.value = lat;
+  var input_lng = document.getElementById('load_longitude');
+  input_lng.value = lng;
+
+  var getlat = input_lat.value;
+  var getlng = input_lng.value;
 
   </script>
 </html>
