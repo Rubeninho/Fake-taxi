@@ -36,7 +36,7 @@
     }
     document.cookie = "username=John Doe";
     console.log(document.cookie);
-    
+
   </script>
   <title>Register</title>
   <meta charset="utf-8" />
@@ -52,33 +52,32 @@
   <div style="
         background-attachment: fixed; background-repeat: no-repeat; width: 100%; height: 100%; background-image: url('https://besu.info/wp-content/uploads/2018/04/road-3341140_1920.jpg');
       ">
-    <div class="mask d-flex align-items-center h-100">
+    <div class="mask d-flex align-items-center h-100 graduate">
       <div class="container h-100 p-5">
         <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-lg-8">
+          <div class="col-12 col-md-9 col-lg-7 col-xl-6">
             <div class="card" style="border-radius: 15px">
               <div class="card-body p-5">
-                <h2 class="text-uppercase text-center" style="color: black;">Register</h2>
-                <div id="error"></div>
-                <div class="d-flex justify-content-center mt-5">
+                <h2 class="text-uppercase text-center mb-3" style="color: black;">Register</h2>
+                
                   <form action="register.php" method="post" id="form">
 
-                    <div class="form-outline">
+                    <div class="form-outline mb-3">
                       <input type="text" id="username" class="form-control form-control-lg" name="username" />
                       <label class="form-label" style="color: black;" for="registerForm1">Username</label>
                     </div>
 
-                    <div class="form-outline">
+                    <div class="form-outline mb-3">
                       <input type="email" id="email" class="form-control form-control-lg" name="email" />
                       <label class="form-label" style="color: black;" for="registerForm2">Email</label>
                     </div>
 
-                    <div class="form-outline">
+                    <div class="form-outline mb-3">
                       <input type="tel" id="phone" class="form-control form-control-lg" name="phone" />
                       <label class="form-label" style="color: black;" for="registerForm3">Phone Number</label>
                     </div>
 
-                    <div class="form-outline">
+                    <div class="form-outline mb-3">
                       <input type="password" id="password" class="form-control form-control-lg" name="password" />
                       <label class="form-label" style="color: black;" for="registerForm4">Password</label>
                     </div>
@@ -90,7 +89,8 @@
                     </div>
 
                     <div class="form-check d-flex justify-content-center mb-3"></div>
-                    <button class="d-flex justify-content-center" type="submit" onclick="saveCookies()">Register</button>
+                    <button class="btn btn-success btn-block btn-lg graduateButton text-body registerColor" style="color: white!important;" type="submit"
+                      onclick="saveCookies()">Register</button>
                     <p class="text-center text-muted mt-3 mb-0">
                       Have already an account?
                       <a href="login.html" class="fw-bold text-body"><u>Login here</u></a>
@@ -103,7 +103,7 @@
         </div>
       </div>
     </div>
-    </div>
+  </div>
   </div>
 </body>
 
